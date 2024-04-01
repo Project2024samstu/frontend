@@ -1,50 +1,27 @@
-import { useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { setUser } from '../store/userSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import '../modal.scss'
+import { useDispatch } from 'react-redux'
+import { closeModal } from '../store/appSlice'
+import { Link } from 'react-router-dom'
 
-const Login = () => {
-	const [formData, setFormData] = useState({ email: '', password: '' })
-	const navigate = useNavigate()
+function App() {
 	const dispatch = useDispatch()
-	const isAuth = useSelector((state) => state.user.isAuth)
-
-	const onSubmit = async (e) => {
-		e.preventDefault()
-		// const response = await fetch('http://localhost:3000/api/auth/login', {
-		// 	method: 'POST',
-		// 	body: JSON.stringify(formData),
-		// 	headers: {
-		// 		'Content-Type': 'application/json',
-		// 	},
-		// })
-		// const data = await response.json()
-		dispatch(setUser(formData))
-		navigate('/')
-	}
-
-	if (isAuth) {
-		return <Navigate to='/' replace={true} />
-	}
-
 	return (
-		<form onSubmit={onSubmit}>
-			<input
-				type='email'
-				onChange={(e) =>
-					setFormData({ ...formData, email: e.target.value })
-				}
-			/>
-			<input
-				type='password'
-				onChange={(e) =>
-					setFormData({ ...formData, password: e.target.value })
-				}
-			/>
+		<div className='App'>
+			<button className='open-modal-btn'>✨ Открыть окно</button>
+			<div className='overlay'>
+				<div className='modal'>
+					<button onClick={() => dispatch(closeModal())}>x</button>
+					<form>
+						<input type='email' />
+						<input type='password' />
 
-			<button>Войти</button>
-			<Link to='/register'>Зарегистрироваться</Link>
-		</form>
+						<button>Войти</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	)
 }
-export default Login
+
+export default App
