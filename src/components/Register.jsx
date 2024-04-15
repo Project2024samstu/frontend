@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 
-const Register = () => {
+export const Register = () => {
 	const [formData, setFormData] = useState({ email: '', password: '' })
 	const navigate = useNavigate()
 	const isAuth = false
@@ -48,8 +48,7 @@ const Register = () => {
 			/>
 
 			<button>Зарегистрироваться</button>
-			<Link to='/login'>Войти</Link>
+			<Link to='/login'>Уже есть аккаунт?</Link>
 		</form>
 	)
 }
-export default Register

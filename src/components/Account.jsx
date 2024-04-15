@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-const Account = () => {
+export const Account = () => {
 	const user = useSelector((state) => state.user.currentUser)
 
 	return (
@@ -11,4 +11,3 @@ const Account = () => {
 		</>
 	)
 }
-export default Account
