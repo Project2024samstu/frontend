@@ -6,8 +6,12 @@ export const Landing = () => {
 		<div className='container'>
 			<div className={styles.Landing}>
 				<div className={styles.Links}>
-					<Link className='button'>Демо ЛК преподавателя</Link>
-					<Link className='button'>Демо ЛК ученика</Link>
+					<Link to='/demoTeacher' className='button'>
+						Демо ЛК преподавателя
+					</Link>
+					<Link to='/demoStudent' className='button'>
+						Демо ЛК ученика
+					</Link>
 				</div>
 			</div>
 		</div>

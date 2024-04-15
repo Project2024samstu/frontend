@@ -1,0 +1,66 @@
+/* Добавим отступы и выровняем элементы формы и таблицы */
+.container-generate-tasks,
+.container-generate-check-variables {
+	margin-top: 30px;
+	padding: 0 20px; /* Добавляем отступы слева и справа */
+}
+
+/* Выравниваем первый label по вертикали */
+.container-generate-check-variables > div:first-child label {
+	margin-bottom: 15px;
+	display: inline-block; /* Выравниваем метки и поля ввода по вертикали */
+}
+
+/* Добавим отступы для элементов формы */
+.container-generate-tasks > div,
+.container-generate-check-variables > div {
+	margin-bottom: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+/* Уменьшим отступы между элементами ввода */
+.container-generate-tasks input,
+.container-generate-check-variables input {
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+/* Увеличим отступы между метками и полями ввода */
+.container-generate-tasks label,
+.container-generate-check-variables label {
+	margin-right: 10px;
+	margin-bottom: 15px;
+	display: inline-block; /* Выравниваем метки и поля ввода по вертикали */
+}
+
+/* Уменьшим отступ перед кнопкой */
+.container-generate-tasks input[type='button'],
+.container-generate-check-variables input[type='button'] {
+	margin-top: 15px;
+}
+
+/* Сделаем заголовки таблицы жирными и увеличим отступы в ячейках */
+.container-generate-tasks th,
+.container-generate-check-variables th,
+.container-generate-tasks td,
+.container-generate-check-variables td {
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Добавим отступ перед блоком с заданиями */
+.view-task {
+	text-align: center;
+	margin-top: 25px;
+	padding: 0 20px; /* Добавляем отступы слева и справа */
+}
+
+/* Стили для контейнера задания */
+.task-container {
+	margin-top: 20px; /* Добавляем отступ сверху между заданиями */
+	text-align: left; /* Выравниваем текст задания по левому краю */
+}

@@ -1,0 +1,42 @@
+.demo-student {
+	padding: 20px; /* Добавляем отступы вокруг контейнера */
+
+	h1 {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+	.tasks-container {
+		.task-item {
+			margin-bottom: 20px;
+
+			.task-formula {
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			.task-input {
+				padding: 10px 20px;
+				margin-right: 10px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				width: 300px;
+			}
+
+			.task-button {
+				padding: 10px 20px;
+				border: none;
+				background-color: #63699d;
+				color: #fff;
+				font-size: 16px;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: 0.3s;
+
+				&:hover {
+					background-color: #7d83b8;
+				}
+			}
+		}
+	}
+}
