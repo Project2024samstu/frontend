@@ -33,10 +33,16 @@ export const Header = () => {
 								</div>
 								{isDropDownVisible && (
 									<div className={styles.DropDownMenu}>
-										<Link className='button'>
+										<Link
+											to='/demoStudent'
+											className='button'
+										>
 											ЛК студента
 										</Link>
-										<Link className='button'>
+										<Link
+											to='/demoTeacher'
+											className='button'
+										>
 											ЛК преподавателя
 										</Link>
 									</div>
