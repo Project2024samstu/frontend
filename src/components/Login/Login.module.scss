@@ -1,0 +1,19 @@
+.Login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.Input {
+	width: 300px;
+	border: 2px solid #929292;
+	border-radius: 5px;
+	background-color: transparent;
+	transition: 0.3s;
+	&:focus {
+		outline: none;
+		border: 2px solid #4e569b;
+	}
+}

@@ -1,22 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-	isModalOpen: false,
+	isLoginOpen: false,
 }
 
 export const appSlice = createSlice({
 	name: 'app',
 	initialState,
 	reducers: {
-		openModal(state) {
+		openLogin(state) {
 			state.isModalOpen = true
 		},
-		closeModal(state) {
+		closeLogin(state) {
 			state.isModalOpen = false
 		},
 	},
 })
 
-export const { openModal, closeModal } = appSlice.actions
+export const { openLogin, closeLogin } = appSlice.actions
 
 export default appSlice.reducer
