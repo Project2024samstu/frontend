@@ -1,12 +1,15 @@
 import styles from './Modal.module.scss'
 
-export const Modal = ({ children, onClose }) => {
+export const Modal = ({ title, children, onClose }) => {
 	return (
 		<div className={styles.Overlay}>
 			<div className={styles.Modal}>
-				<button className={styles.Close} onClick={onClose}>
-					&#215;
-				</button>
+				<div className={styles.Header}>
+					<p>{title}</p>
+					<button className={styles.Close} onClick={onClose}>
+						&#215;
+					</button>
+				</div>
 				{children}
 			</div>
 		</div>

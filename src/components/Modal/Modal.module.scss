@@ -9,6 +9,19 @@
 	z-index: 3;
 }
 
+.Header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 55%;
+	width: 100%;
+	margin-left: auto;
+	p {
+		font-weight: 600;
+		font-size: 20px;
+	}
+}
+
 .Modal {
 	background-color: #fff;
 	width: 70%;
